@@ -1,6 +1,6 @@
 export class Menus {
     MainMenu: string[] = [
-        'Tables', 'Transactions', 'List', 'Settings'
+        'Users', 'Category', 'Products', 'Dealerss & Customers', 'Inventory'
     ];
     TablesMenu: string[] = ['Products', 'Product Categories', 'Partners'];
     TransactionsMenu: string[] = ['Incoming', 'Outgoing',];

@@ -6,10 +6,14 @@ import { Menus } from './Menus/Menu';
   providedIn: 'root'
 })
 export class MenuService {
-
-  constructor() { }
+menus:Menus;
+  constructor() {
+    this.menus=new Menus();
+   }
   getMainMenu():Observable<string[]>{
-    var menus=new Menus();
-    return of(menus.MainMenu);
+    return of(this.menus.MainMenu);
+  }
+  getTableMenu():Observable<string[]>{
+    return of(this.menus.TablesMenu);
   }
 }

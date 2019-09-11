@@ -1,1 +1,19 @@
-<p>table works!</p>
+<div class="row scrollable">
+        <div class="col-md-12">
+          <div class="row" *ngFor="let menu of tableMenus" (click)="onSelect(menu)">
+            <div class="col-xs-12 col-md-12">
+              <a routerLink="/ContentControl/{{menu}}" class="thumbnail">
+    <!-- <a [routerLink]="[{outlets:content:[{{menu}}]}]" *ngFor='let menu of mainMenus'>| -->
+        <a [routerLink]="[{ outlets: { list:['streams'], content:['menu'] } }]"  *ngFor='let menu of mainMenus'>Link</a>
+
+
+               
+                <div class="caption text-center">
+                  <p>{{menu}}</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>

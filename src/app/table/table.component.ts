@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../menu-service.service';
 
 @Component({
   selector: 'app-table',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
+  tableMenus: string[];
 
-  constructor() { }
+  constructor(private menuService:MenuService) { }
 
   ngOnInit() {
+    this.getTableMenus();
+    console.log(this.tableMenus);
+  }
+  getTableMenus(){
+    this.menuService.getTableMenu()
+    .subscribe(tableMenu=>this.tableMenus=tableMenu);
   }
 
 }

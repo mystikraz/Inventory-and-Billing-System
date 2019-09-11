@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <a routerLink="table" *ngFor='let menu of mainMenus'>|
+    <a routerLink="{{menu}}" *ngFor='let menu of mainMenus'>|
       <!-- <a *ngFor='let menu of mainMenus'>| -->
       {{menu}}
     </a>
@@ -11,5 +11,6 @@
     <router-outlet></router-outlet>
   </div>
   <div class="col-md-10">
+      <router-outlet name="content"></router-outlet>
   </div>
 </div>
